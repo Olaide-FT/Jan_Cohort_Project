@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Gallery | TravelTime</title>
+
+    <style>
+      /* SLIDES */
+      .slides .slide {
+        opacity: 0;
+        transform: scale(0.92);
+        pointer-events: none;
+        transition:
+          opacity 300ms ease,
+          transform 300ms ease,
+          width 300ms ease;
+      }
+
+      /* Center slide */
+      #s1:checked ~ .slides .slide-1,
+      #s2:checked ~ .slides .slide-2,
+      #s3:checked ~ .slides .slide-3,
+      #s4:checked ~ .slides .slide-4,
+      #s5:checked ~ .slides .slide-5,
+      #s6:checked ~ .slides .slide-6,
+      #s7:checked ~ .slides .slide-7,
+      #s8:checked ~ .slides .slide-8 {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        z-index: 30;
+      }
+
+      /*
+         LG+ Layout: smaller sides + real gaps
+          */
+      @media (min-width: 1024px) {
+        /* prev smaller width */
+        #s1:checked ~ .slides .slide-8,
+        #s2:checked ~ .slides .slide-1,
+        #s3:checked ~ .slides .slide-2,
+        #s4:checked ~ .slides .slide-3,
+        #s5:checked ~ .slides .slide-4,
+        #s6:checked ~ .slides .slide-5,
+        #s7:checked ~ .slides .slide-6,
+        #s8:checked ~ .slides .slide-7 {
+          opacity: 1;
+          width: 340px;
+          transform: translateX(-440px) rotate(-3deg);
+          pointer-events: auto;
+          z-index: 10;
+        }
+
+        /* after smaller width */
+        #s1:checked ~ .slides .slide-2,
+        #s2:checked ~ .slides .slide-3,
+        #s3:checked ~ .slides .slide-4,
+        #s4:checked ~ .slides .slide-5,
+        #s5:checked ~ .slides .slide-6,
+        #s6:checked ~ .slides .slide-7,
+        #s7:checked ~ .slides .slide-8,
+        #s8:checked ~ .slides .slide-1 {
+          opacity: 1;
+          width: 340px;
+          transform: translateX(440px) rotate(3deg);
+          pointer-events: auto;
+          z-index: 10;
+        }
+
+        /* Center width */
+        #s1:checked ~ .slides .slide-1,
+        #s2:checked ~ .slides .slide-2,
+        #s3:checked ~ .slides .slide-3,
+        #s4:checked ~ .slides .slide-4,
+        #s5:checked ~ .slides .slide-5,
+        #s6:checked ~ .slides .slide-6,
+        #s7:checked ~ .slides .slide-7,
+        #s8:checked ~ .slides .slide-8 {
+          width: 420px;
+        }
+      }
+
+      /* 
+         DOTS */
+      .gallery-dots .gdot {
+        display: inline-block;
+        transition:
+          background-color 200ms ease,
+          transform 200ms ease;
+      }
+
+      #s1:checked ~ .gallery-dots .gdot-1,
+      #s2:checked ~ .gallery-dots .gdot-2,
+      #s3:checked ~ .gallery-dots .gdot-3,
+      #s4:checked ~ .gallery-dots .gdot-4,
+      #s5:checked ~ .gallery-dots .gdot-5,
+      #s6:checked ~ .gallery-dots .gdot-6,
+      #s7:checked ~ .gallery-dots .gdot-7,
+      #s8:checked ~ .gallery-dots .gdot-8 {
+        background: #f95e4d;
+        transform: scale(1.05);
+      }
+
+      /* CHEVRONS WORK WITH RADIOS */
+      .arrows .prev label,
+      .arrows .next label {
+        display: none;
+      }
+
+      /* PREV label visibility */
+      #s1:checked ~ .arrows .prev .prev-1,
+      #s2:checked ~ .arrows .prev .prev-2,
+      #s3:checked ~ .arrows .prev .prev-3,
+      #s4:checked ~ .arrows .prev .prev-4,
+      #s5:checked ~ .arrows .prev .prev-5,
+      #s6:checked ~ .arrows .prev .prev-6,
+      #s7:checked ~ .arrows .prev .prev-7,
+      #s8:checked ~ .arrows .prev .prev-8 {
+        display: grid;
+      }
+
+      /* NEXT label visibility */
+      #s1:checked ~ .arrows .next .next-1,
+      #s2:checked ~ .arrows .next .next-2,
+      #s3:checked ~ .arrows .next .next-3,
+      #s4:checked ~ .arrows .next .next-4,
+      #s5:checked ~ .arrows .next .next-5,
+      #s6:checked ~ .arrows .next .next-6,
+      #s7:checked ~ .arrows .next .next-7,
+      #s8:checked ~ .arrows .next .next-8 {
+        display: grid;
+      }
+    </style>
+  </head>
+
+  <body class="font-[poppins]">
+    <!-- HEADER -->
+    <header
+      class="relative bg-cover bg-center min-h-[420px]"
+      style="background-image: url(&quot;./Pictures/about-1.webp&quot;)"
+    >
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <!-- NAVBAR -->
+      <div
+        class="relative z-20 max-w-7xl mx-auto flex justify-between items-center py-6 px-6 text-white"
+      >
+        <h1 class="text-2xl font-bold font-[raleway]">TravelTime</h1>
+
+        <nav class="hidden xl:block font-[poppins]">
+          <ul class="flex gap-8 text-sm font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a class="text-[#f95e4d]" href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">More Pages</a></li>
+            <li><a href="#">Dropdown</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a
+          href="#"
+          class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
+        >
+          Get Started
+        </a>
+      </div>
+
+      <!-- HERO TEXT -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20 text-white">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 class="text-2xl lg:text-4xl font-bold font-[raleway] mb-4">
+            Gallery
+          </h1>
+
+          <p
+            class="mx-auto max-w-2xl text-xs sm:text-sm md:text-sm mb-6 text-gray-200 leading-relaxed"
+          >
+            Esse dolorum voluptatum ullam est sint nemo et est ipsa porro
+            placeat quibusdam quia assumenda numquam molestias.
+          </p>
+
+          <div class="text-sm text-gray-200 pb-[60px]">
+            <a
+              href="index.html"
+              class="text-[#f95e4d] hover:text-[#e24c3f] transition-colors"
+            >
+              Home
+            </a>
+            <span class="mx-2 text-gray-400">/</span>
+            <span>Gallery</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="py-12 sm:py-16 lg:py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <section class="group relative py-2">
+          <input class="hidden" type="radio" name="gallery" id="s1" checked />
+          <input class="hidden" type="radio" name="gallery" id="s2" />
+          <input class="hidden" type="radio" name="gallery" id="s3" />
+          <input class="hidden" type="radio" name="gallery" id="s4" />
+          <input class="hidden" type="radio" name="gallery" id="s5" />
+          <input class="hidden" type="radio" name="gallery" id="s6" />
+          <input class="hidden" type="radio" name="gallery" id="s7" />
+          <input class="hidden" type="radio" name="gallery" id="s8" />
+
+          <!-- CHEVRONS: hidden on sm/md & only on hover -->
+          <div class="arrows hidden lg:block">
+            <!-- PREV -->
+            <div
+              class="prev absolute left-[-20px] top-1/2 -translate-y-1/2 z-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <label
+                for="s8"
+                class="prev-1 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s1"
+                class="prev-2 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s2"
+                class="prev-3 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s3"
+                class="prev-4 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s4"
+                class="prev-5 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s5"
+                class="prev-6 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s6"
+                class="prev-7 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s7"
+                class="prev-8 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-left text-[#f95e4d]"></i>
+              </label>
+            </div>
+
+            <!-- NEXT -->
+            <div
+              class="next absolute right-[-20px] top-1/2 -translate-y-1/2 z-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <label
+                for="s2"
+                class="next-1 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s3"
+                class="next-2 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s4"
+                class="next-3 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s5"
+                class="next-4 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s6"
+                class="next-5 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s7"
+                class="next-6 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s8"
+                class="next-7 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+
+              <label
+                for="s1"
+                class="next-8 w-12 h-12 rounded-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/5 grid place-items-center cursor-pointer"
+              >
+                <i class="fa-solid fa-chevron-right text-[#f95e4d]"></i>
+              </label>
+            </div>
+          </div>
+
+          <!-- SLIDES -->
+          <div class="slides relative h-[280px] lg:h-[400px]">
+            <!-- Slide 1 -->
+            <div
+              class="slide slide-1 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-1.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 1"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="slide slide-2 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-2.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 2"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="slide slide-3 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-3.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 3"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+              class="slide slide-4 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-4.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 4"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div
+              class="slide slide-5 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-5.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 5"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div
+              class="slide slide-6 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-6.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 6"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div
+              class="slide slide-7 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-7.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 7"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div
+              class="slide slide-8 group/card absolute inset-0 mx-auto w-[96%] max-w-[420px] h-[260px] lg:h-[310px] rounded-2xl overflow-hidden bg-white shadow-[0_40px_100px_rgba(0,0,0,0.20)]"
+            >
+              <img
+                src="./Pictures/gallery-8.webp"
+                class="w-full h-full object-cover"
+                alt="Gallery 8"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-[#f95e4d]/10 opacity-0 group-hover/card:opacity-100 transition duration-300"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/70 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-2xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOTS -->
+          <div class="gallery-dots pt-2 sm:pt-3 flex justify-center gap-3">
+            <label
+              for="s1"
+              class="gdot gdot-1 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s2"
+              class="gdot gdot-2 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s3"
+              class="gdot gdot-3 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s4"
+              class="gdot gdot-4 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s5"
+              class="gdot gdot-5 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s6"
+              class="gdot gdot-6 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s7"
+              class="gdot gdot-7 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+            <label
+              for="s8"
+              class="gdot gdot-8 h-3 w-3 rounded-full border border-[#f95e4d] cursor-pointer"
+            ></label>
+          </div>
+        </section>
+      </div>
+
+      <!--
+     GALLERY GRID
+     Mobile
+     -->
+      <section class="pt-16 max-w-7xl mx-auto px-6">
+        <div class="grid lg:hidden grid-cols-2 gap-6 items-stretch">
+          <!-- LEFT COLUMN: 5 SMALL -->
+          <div class="flex flex-col gap-6">
+            <!-- small 1 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-1.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- small 2 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-2.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- small 3 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-3.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- small 4 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-5.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- small 5 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-8.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="flex flex-col gap-6">
+            <!-- BIG -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[264px]"
+            >
+              <img
+                src="./Pictures/gallery-4.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- SMALL -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[120px]"
+            >
+              <img
+                src="./Pictures/gallery-6.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- BIG -->
+            <div
+              class="group relative rounded-2xl overflow-hidden shadow-md h-[264px]"
+            >
+              <img
+                src="./Pictures/gallery-7.webp"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LG+ LAYOUT -->
+        <div class="hidden lg:grid grid-cols-3 gap-6 items-start">
+          <!-- LEFT: 3 small -->
+          <div class="grid gap-6">
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-8.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-3.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-5.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER: 2 big -->
+          <div class="grid gap-6">
+            <div class="group relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="./Pictures/gallery-4.webp"
+                class="w-full h-[420px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="./Pictures/gallery-7.webp"
+                class="w-full h-[360px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-14 h-14 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: 3 small -->
+          <div class="grid gap-6">
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-2.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-6.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./Pictures/gallery-1.webp"
+                class="w-full h-[252px] object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-[#f95e4d]/10 opacity-0 group-hover:opacity-100 transition grid place-items-center"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-white/80 grid place-items-center"
+                >
+                  <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW MORE BUTTON -->
+        <div class="flex justify-center pt-12">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 px-10 py-3 rounded-full border border-[#f95e4d] text-[#f95e4d] font-semibold tracking-wide hover:bg-[#f95e4d] hover:text-white transition"
+          >
+            VIEW MORE <i class="fa-solid fa-arrow-right-long text-sm"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-[#001a1d] text-gray-300">
+      <div
+        class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-6">TravelTime</h2>
+          <p class="mb-6">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel
+            ullamcorper sit amet ligula.
+          </p>
+          <h3 class="text-white font-semibold mb-3">Stay Updated</h3>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-3 rounded-l-full bg-[#0b2a2e] text-white focus:outline-none"
+            />
+            <button
+              class="bg-[#f95e4d] px-6 rounded-r-full flex items-center justify-center hover:bg-red-500 transition duration-300"
+            >
+              <i class="fa-solid fa-paper-plane text-white"></i>
+            </button>
+          </form>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Company
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Careers</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Press</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Solutions
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition"
+                >Digital Strategy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition"
+                >Cloud Computing</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition"
+                >Data Analytics</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition"
+                >AI Solutions</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition"
+                >Cybersecurity</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Get in Touch
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <div class="space-y-4">
+            <p>2847 Maple Avenue, Los Angeles, CA 90210</p>
+            <p>+1 (555) 987-6543</p>
+            <p>contact@example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-[#0b2a2e] bg-[#031013]">
+        <div
+          class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p>
+            © Copyright <strong class="text-white">MyWebsite</strong> All Rights
+            Reserved
+          </p>
+          <span
+            >Designed by
+            <a href="#" class="text-[#f95e4d]">BootstrapMade</a></span
+          >
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#"
+      id="scroll-top"
+      class="w-10 h-10 text-white fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%]"
+      ><i class="fa-solid fa-arrow-up mx-[9px] my-3"></i
+    ></a>
+  </body>
+</html>

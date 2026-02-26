@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Traveltime</title>
+  </head>
+
+  <body>
+    <header
+      class="relative bg-cover bg-center min-h-[420px]"
+      style="background-image: url(&quot;./Pictures/about-1.webp&quot;)"
+    >
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div
+        class="relative z-20 max-w-7xl mx-auto flex justify-between items-center py-6 px-6 text-white"
+      >
+        <h1 class="text-2xl font-bold font-[raleway]">TravelTime</h1>
+        <nav class="hidden md:hidden lg:hidden xl:block font-[poppins]">
+          <ul class="flex gap-8 text-sm font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="#">More Pages</a></li>
+            <li><a href="#">Dropdown</a></li>
+            <li><a class="text-[#f95e4d]" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
+        >
+          Get Started
+        </a>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20 text-white">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 class="text-2xl lg:text-4xl font-bold font-[raleway] mb-4">
+            Contact
+          </h1>
+
+          <p
+            class="mx-auto max-w-2xl text-xs sm:text-sm md:text-sm mb-6 text-gray-200 leading-relaxed"
+          >
+            Esse dolorum voluptatum ullam est sint nemo et est ipsa porro
+            placeat quibusdam quia assumenda numquam molestias.
+          </p>
+
+          <div class="text-sm text-gray-200 pb-[60px]">
+            <a
+              href="index.html"
+              class="text-[#f95e4d] hover:text-[#e24c3f] transition-colors"
+            >
+              Home
+            </a>
+            <span class="mx-2 text-gray-400">/</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTACT MAIN SECTION -->
+    <section class="bg-white py-12 sm:py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <!-- LEFT: CONTACT INFORMATION -->
+          <aside
+            class="rounded-3xl p-8 sm:p-10 text-white shadow-[0_30px_80px_rgba(0,0,0,0.12)] bg-gradient-to-b from-[#ec5d51] to-[#a6545b]"
+          >
+            <h2 class="text-2xl sm:text-3xl font-bold font-[raleway]">
+              Contact Information
+            </h2>
+            <p class="mt-3 text-white/80 text-sm leading-relaxed max-w-sm">
+              Dignissimos deleniti accusamus rerum voluptate. Dignissimos rerum
+              sit maiores reiciendis voluptate inventore ut.
+            </p>
+
+            <!-- Info cards -->
+            <div class="mt-8 space-y-4">
+              <!-- Location -->
+              <div
+                class="rounded-2xl bg-white/10 px-5 py-4 flex gap-4 items-start"
+              >
+                <div
+                  class="w-11 h-11 rounded-full bg-white/15 grid place-items-center shrink-0"
+                >
+                  <i class="fa-solid fa-location-dot text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">Our Location</p>
+                  <p class="text-sm text-white/80">
+                    4952 Hilltop Dr, Anytown, CA 90210
+                  </p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                class="rounded-2xl bg-white/10 px-5 py-4 flex gap-4 items-start"
+              >
+                <div
+                  class="w-11 h-11 rounded-full bg-white/15 grid place-items-center shrink-0"
+                >
+                  <i class="fa-solid fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">Email Us</p>
+                  <p class="text-sm text-white/80">info@example.com</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div
+                class="rounded-2xl bg-white/10 px-5 py-4 flex gap-4 items-start"
+              >
+                <div
+                  class="w-11 h-11 rounded-full bg-white/15 grid place-items-center shrink-0"
+                >
+                  <i class="fa-solid fa-phone text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">Call Us</p>
+                  <p class="text-sm text-white/80">+1 (555) 123-4567</p>
+                </div>
+              </div>
+
+              <!-- Hours -->
+              <div
+                class="rounded-2xl bg-white/10 px-5 py-4 flex gap-4 items-start"
+              >
+                <div
+                  class="w-11 h-11 rounded-full bg-white/15 grid place-items-center shrink-0"
+                >
+                  <i class="fa-solid fa-clock text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">Working Hours</p>
+                  <p class="text-sm text-white/80">
+                    Monday–Saturday: 9AM – 7PM
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Follow -->
+            <div class="mt-10">
+              <p class="font-semibold">Follow Us</p>
+              <div class="mt-4 flex gap-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 grid place-items-center transition"
+                  aria-label="Facebook"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 grid place-items-center transition"
+                  aria-label="X"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 grid place-items-center transition"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 grid place-items-center transition"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 grid place-items-center transition"
+                  aria-label="YouTube"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT: MAP + FORM -->
+          <div class="lg:col-span-2 space-y-8">
+            <!-- MAP -->
+            <div
+              class="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.10)]"
+            >
+              <!-- Replace the src with your preferred map location if needed -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126497.71855939021!2d4.562702550000001!3d7.7841309999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787e4c949b8fd%3A0x33c62c1600f59277!2sOsogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1772108916826!5m2!1sen!2sng"
+class="w-full h-[260px] sm:h-[320px] lg:h-[320px]"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <!-- FORM CARD -->
+            <div
+              class="rounded-3xl bg-white shadow-[0_30px_80px_rgba(0,0,0,0.10)] p-8 sm:p-10"
+            >
+              <h3 class="text-2xl font-bold font-[raleway] text-[#111827]">
+                Send Us a Message
+              </h3>
+              <p class="mt-2 text-sm text-gray-500 max-w-2xl leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit mauris
+                hendrerit faucibus imperdiet nec eget felis.
+              </p>
+
+              <form class="mt-8 space-y-5">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none focus:border-[#f95e4d] focus:ring-2 focus:ring-[#f95e4d]/20 transition"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none focus:border-[#f95e4d] focus:ring-2 focus:ring-[#f95e4d]/20 transition"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none focus:border-[#f95e4d] focus:ring-2 focus:ring-[#f95e4d]/20 transition"
+                />
+
+                <textarea
+                  rows="5"
+                  placeholder="Your Message"
+                  class="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none focus:border-[#f95e4d] focus:ring-2 focus:ring-[#f95e4d]/20 transition resize-none"
+                ></textarea>
+
+                <button
+                  type="submit"
+                  class="w-full rounded-xl py-4 font-semibold text-white bg-gradient-to-r from-[#ec5d51] to-[#a6545b] hover:brightness-110 transition flex items-center justify-center gap-3"
+                >
+                  Send Message
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CONTACT MAIN SECTION -->
+
+    <footer id="footer" class="bg-[#001a1d] text-gray-300">
+      <div
+        class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-6">TravelTime</h2>
+          <p class="mb-6">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel
+            ullamcorper sit amet ligula.
+          </p>
+          <h3 class="text-white font-semibold mb-3">Stay Updated</h3>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-3 rounded-l-full bg-[#0b2a2e] text-white focus:outline-none"
+            />
+            <button
+              class="bg-[#f95e4d] px-6 rounded-r-full flex items-center justify-center hover:bg-red-500 transition duration-300"
+            >
+              <i class="fa-solid fa-paper-plane text-white"></i>
+            </button>
+          </form>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Company
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  About
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Careers
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Press
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Blog
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Contact
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Solutions
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Digital Strategy
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Cloud Computing
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Data Analytics
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  AI Solutions
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Cybersecurity
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Get in Touch
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-location-dot text-[#f95e4d]"></i>
+              </div>
+              <p>
+                2847 Maple Avenue<br />
+                Los Angeles, CA 90210<br />
+                United States
+              </p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-[#f95e4d]"></i>
+              </div>
+              <p>+1 (555) 987-6543</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-envelope text-[#f95e4d]"></i>
+              </div>
+              <p>contact@example.com</p>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#0b2a2e] bg-[#031013]">
+        <div
+          class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p>
+            © Copyright <strong class="text-white">MyWebsite</strong> All Rights
+            Reserved
+          </p>
+
+          <div class="text-sm flex flex-wrap gap-6 items-center">
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Cookie Policy</a
+            >
+            <span
+              >Designed by
+              <a href="#" class="text-[#f95e4d]">BootstrapMade</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#"
+      id="scroll-top"
+      class="w-10 h-10 text-white fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%]"
+      ><i class="fa-solid fa-arrow-up mx-[9px] my-3"></i
+    ></a>
+  </body>
+</html>
