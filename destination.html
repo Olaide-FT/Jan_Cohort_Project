@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Traveltime</title>
+  </head>
+
+  <body>
+    <header class="absolute top-0 w-full z-10 bg-transparent">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-6 px-6 text-white"
+      >
+        <h1 class="text-2xl font-bold font-[raleway]">TravelTime</h1>
+        <nav class="hidden xl:block font-[poppins]">
+          <ul class="flex gap-8 text-sm font-medium">
+            <li>
+              <a href="index.html" class="hover:text-[#f95e4d] transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-[#f95e4d] transition"
+                >About</a
+              >
+            </li>
+            <li><a href="#" class="text-[#f95e4d]">Destinations</a></li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Tours</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">More Pages</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Dropdown</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#f95e4d] transition">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
+        >
+          Get Started
+        </a>
+      </div>
+    </header>
+    <main class="">
+      <div
+        class="relative bg-[url('./pictures/about-1.webp')] bg-cover bg-center min-h-[450px]"
+      >
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative top-60 text-center text-white">
+          <h1 class="font-[raleway] text-3xl font-bold">Destinations</h1>
+          <p>
+            Esse dolorum voluptatum ullam est sint nemo et est ipsa porro
+            placeat quibusdam quia assumenda numquam molestias.
+          </p>
+          <ul class="pt-2">
+            <a href="index.html" class="text-[#f95e4d]">Home</a>
+            <a href="#">/</a>
+            <a href="#" class="">About</a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center justify-items-center pt-[40px]">
+        <button class="flex p-[10px] rounded-3xl shadow-lg">
+          <p class="none p-[10px] rounded-3xl px-[15px] hover:bg-red-400">
+            <a href=""></a>All
+          </p>
+          <p class="none p-[10px] rounded-3xl px-[15px] hover:bg-red-400">
+            <a href=""></a>Asia
+          </p>
+          <p class="none p-[10px] rounded-3xl px-[15px] hover:bg-red-400">
+            <a href=""></a>Europe
+          </p>
+          <p class="none p-[10px] rounded-3xl px-[15px] hover:bg-red-400">
+            <a href=""></a>Africa
+          </p>
+          <p class="none p-[10px] rounded-3xl px-[15px] hover:bg-red-400">
+            <a href=""></a>Americas
+          </p>
+        </button>
+      </div>
+      <section class="pt-6 flex justify-center">
+        <div
+          class="relative w-full max-w-6xl mx-auto mt-8 overflow-hidden rounded-2xl"
+        >
+          <img
+            src="./pictures/feature-img.webp"
+            alt="Paris"
+            class="w-full h-[450px] object-cover rounded-xl"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-10 left-6 md:left-14 text-white max-w-lg">
+            <span class="bg-red-400 px-4 py-1 rounded-full font-semibold"
+              >FEATURED</span
+            >
+            <h2 class="text-2xl font-bold mt-3">Paris, France</h2>
+            <p class="text-sm mt-2">
+              City of lights and romance with iconic landmarks and world-class
+              museums
+            </p>
+            <p class="mt-3">
+              <i class="fa-solid fa-location-dot"></i> 15 Tours
+            </p>
+            <p class="font-semibold mt-2 cursor-pointer hover:underline">
+              Explore Now
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto mt-8"
+      >
+        <div class="relative overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/popular-img-1.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-5 left-5 text-white">
+            <span
+              class="bg-red-400 px-3 py-1 rounded-full text-sm font-semibold"
+              >POPULAR</span
+            >
+            <p class="font-bold mt-2">Bali, Indonesia</p>
+            <p>8 Tours <span class="ml-24">$899</span></p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/adventure-img-2.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-5 left-5 text-white">
+            <span
+              class="bg-red-400 px-3 py-1 rounded-full text-sm font-semibold"
+            >
+              ADVENTURE</span
+            >
+            <p class="font-bold mt-2">Costa Rica</p>
+            <p>6 Tours <span class="ml-20">$1,199</span></p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/culture-img-3.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-5 left-5 text-white">
+            <span
+              class="bg-red-400 px-3 py-1 rounded-full text-sm font-semibold"
+              >CULTURE</span
+            >
+            <p class="font-bold mt-2">Cairo, Egypt</p>
+            <p>7 Tours <span class="ml-20">$1,499</span></p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/luxury-img-4.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-5 left-5 text-white">
+            <span
+              class="bg-red-400 px-3 py-1 rounded-full text-sm font-semibold"
+              >LUXURY</span
+            >
+            <p class="font-bold mt-2">Singapore</p>
+            <p>12 Tours <span class="ml-20">$1,799</span></p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 px-6 max-w-7xl mx-auto mt-10"
+      >
+        <div class="relative text-white overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/romantic-img-a.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="bg-red-400 px-3 py-1 rounded-full font-semibold"
+              >ROMANTIC</span
+            >
+            <h3 class="text-xl font-bold mt-2">Santorini, Greece</h3>
+            <p class="text-sm">
+              Stunning sunsets and white-washed buildings overlooking the Aegean
+              Sea
+            </p>
+            <p class="mt-2">
+              <i class="fa-solid fa-location-dot"></i> 10 Tours<span
+                class="ml-20 font-bold"
+                >From $1,599</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="relative text-white overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/vibrant-img-b.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="bg-red-400 px-3 py-1 rounded-full font-semibold">
+              VIBRANT</span
+            >
+            <h3 class="text-xl font-bold mt-2">Rio de Janeiro</h3>
+            <p class="text-sm">
+              Spectacular beaches, vibrant carnival culture, and iconic Christ
+              statue
+            </p>
+            <p class="mt-2">
+              <i class="fa-solid fa-location-dot"></i> 9 Tours<span
+                class="ml-20 font-bold"
+                >From $1,799</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="relative text-white overflow-hidden rounded-2xl">
+          <img
+            src="./pictures/scenic-img-c.webp"
+            class="w-full rounded-xl object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="bg-red-400 px-3 py-1 rounded-full font-semibold">
+              SCENIC</span
+            >
+            <h3 class="text-xl font-bold mt-2">Cape Town</h3>
+            <p class="text-sm">
+              Dramatic mountains, pristine beaches, and world-renowned wine
+              regions
+            </p>
+            <p class="mt-2">
+              <i class="fa-solid fa-location-dot"></i> 11 Tours<span
+                class="ml-20 font-bold"
+                >From $1,699</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="flex justify-center px-4 mt-12 mb-12">
+        <div
+          class="bg-red-100 text-center rounded-3xl max-w-2xl w-full py-10 px-6"
+        >
+          <h2 class="text-xl font-bold">Ready to Start Your Journey?</h2>
+          <p class="max-w-lg mx-auto mt-3">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
+            cupidatat.
+          </p>
+          <button
+            class="bg-red-400 text-white px-6 py-3 rounded-full mt-6 hover:bg-red-500 transition"
+          >
+            View All Destinations
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="bg-[#001a1d] text-gray-300 mt-[100px]">
+      <div
+        class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-6 font-[raleway]">
+            TravelTime
+          </h2>
+          <p class="mb-6">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel
+            ullamcorper sit amet ligula.
+          </p>
+          <h3 class="text-white font-semibold mb-3 font-[raleway] text-[16px]">
+            Stay Updated
+          </h3>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-3 rounded-l-full bg-[#0b2a2e] text-white focus:outline-none"
+            />
+            <button
+              class="bg-[#f95e4d] px-6 rounded-r-full flex items-center justify-center hover:bg-red-500 transition duration-300"
+            >
+              <i class="fa-solid fa-paper-plane text-white"></i>
+            </button>
+          </form>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]"
+          >
+            Company
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  About
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Careers
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Press
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Blog
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Contact
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]"
+          >
+            Solutions
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Digital Strategy
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Cloud Computing
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Data Analytics
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  AI Solutions
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]"
+              >
+                <i
+                  class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  Cybersecurity
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]"
+          >
+            Get in Touch
+            <span
+              class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"
+            ></span>
+          </h4>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-location-dot text-[#f95e4d]"></i>
+              </div>
+              <p>
+                2847 Maple Avenue<br />
+                Los Angeles, CA 90210<br />
+                United States
+              </p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-[#f95e4d]"></i>
+              </div>
+              <p>+1 (555) 987-6543</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-envelope text-[#f95e4d]"></i>
+              </div>
+              <p>contact@example.com</p>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#0b2a2e] bg-[#031013]">
+        <div
+          class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p>
+            © Copyright <strong class="text-white">MyWebsite</strong> All Rights
+            Reserved
+          </p>
+
+          <div class="text-sm flex flex-wrap gap-6 items-center">
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-[#f95e4d] transition"
+              >Cookie Policy</a
+            >
+            <span
+              >Designed by
+              <a href="#" class="text-[#f95e4d]">BootstrapMade</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#"
+      id="scroll-top"
+      class="w-10 h-10 text-white fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%]"
+      ><i class="fa-solid fa-arrow-up mx-[9px] my-3"></i
+    ></a>
+  </body>
+</html>
