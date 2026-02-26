@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Traveltime</title>
+</head>
+
+<body class="">
+    <header class="absolute top-0 w-full z-10 ">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-6 px-6 text-white ">
+            <h1 class="text-2xl font-bold font-[raleway]">
+                TravelTime
+            </h1>
+            <nav class="hidden xl:block font-[poppins]">
+                <ul class="flex gap-8 text-sm font-medium">
+                    <li><a href="index.html" class="text-[#f95e4d]">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#f95e4d] transition">About</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Destinations</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Tours</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Gallery</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Blog</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">More Pages</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Dropdown</a></li>
+                    <li><a href="#" class="hover:text-[#f95e4d] transition">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition">
+                Get Started
+            </a>
+        </div>
+    </header>
+    <main class="overflow-hidden">
+        <div class="relative bg-[url('./Pictures/showcase-1.webp')] bg-cover bg-center min-h-[920px] lg:min-h-[700px] md:min-h-[900px] bg-black/10" >
+            <div class="absolute inset-0 bg-black/70"></div>>
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-6 top-[80px] md:top-40 flex flex-col lg:flex-row justify-between items-center gap-16 text-white">
+                <div class="max-w-xl">
+                    <h1 class="text-4xl lg:text-6xl text-center md:text-center lg:text-left font-bold font-[raleway] ">
+                        Discover the World with Us
+                    </h1>
+                     <p class="mt-4 text-gray-300 text-center md:text-center lg:text-left">
+                        Explore breathtaking destinations and create unforgettable memories with our expertly crafted
+                        tours.
+                    </p> 
+                    <div class="flex gap-5 justify-center lg:justify-start mt-4">
+                        <a href="#"
+                            class="bg-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#ff6b5c] transition">
+                            Start Exploring
+                        </a>
+                        <a href="#"
+                            class="border border-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#f95e4d] transition">
+                            View Tours
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-black/80 backdrop-blur-lg rounded-2xl p-8 w-full max-w-sm md:max-w-2xl shadow-xl">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm">Destination</label>
+                        <input type="text" placeholder="Where do you want to go?"
+                            class="w-full p-3 rounded-md bg-transparent border border-gray-600 focus:outline-none focus:border-[#f95e4d]">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-5">
+                        <div>
+                            <label class="block mb-2 text-sm">Check In</label>
+                            <input type="date"
+                                class="w-full p-3 rounded-md bg-transparent border border-gray-600 focus:outline-none focus:border-[#f95e4d]">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm">Check Out</label>
+                            <input type="date"
+                                class="w-full p-3 rounded-md bg-transparent border border-gray-600 focus:outline-none focus:border-[#f95e4d]">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="block mb-2 text-sm">Adults</label>
+                            <input type="number" value="2"
+                                class="w-full p-3 rounded-md bg-transparent border border-gray-600 focus:outline-none focus:border-[#f95e4d]">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm">Children</label>
+                            <input type="number" value="0"
+                                class="w-full p-3 rounded-md bg-transparent border border-gray-600 focus:outline-none focus:border-[#f95e4d]">
+                        </div>
+                    </div>
+                    <button class="w-full bg-[#f95e4d] py-3 rounded-md font-semibold hover:bg-[#ff6b5c] ">
+                        Search Tours
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="pt-20">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 grid-cols-1 gap-16">
+                <div
+                    class="bg-white border border-gray-200 rounded-3xl   p-10 lg:p-14 h-full flex flex-col justify-center transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <div class="">
+                        <span
+                            class="inline-block bg-[#f95e4d26] text-[#f95e4d] text-sm font-semibold px-6 py-2 rounded-full">
+                            ABOUT US
+                        </span>
+                        <h3 class="font-[raleway] font-bold mt-6 text-2xl lg:text-4xl  text-gray-900">
+                            Creating Unforgettable Travel Experiences
+                        </h3>
+                    </div>
+                    <div class="mt-8 space-y-6 text-gray-600 leading-relaxed">
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.
+                        </p>
+                        <p>
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti atque corrupti quos dolores.
+                        </p>
+                    </div>
+                    <div class="mt-10 space-y-5">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-gray-800">Expert local guides in every destination</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-gray-800">Customized itineraries for every traveler</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-gray-800">24/7 customer support throughout your journey</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative w-full max-w-xl mx-auto lg:mx-0  h-full">
+                    <div class="relative h-[400px] md:h-full">
+                        <img src="./Pictures/showcase-2.webp" alt="Travel Adventure"
+                            class="w-full h-full object-cover rounded-3xl">
+                        <div class="absolute top-8 right-8 bg-white rounded-2xl shadow-lg px-6 py-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-[#f95e4d] rounded-full flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-gray-900 text-sm">Award Winner</strong>
+                                    <span class="text-gray-500 text-xs">Best Travel Agency 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-10 left-5 bg-white rounded-2xl shadow-2xl p-5 flex items-center gap-4 w-[280px]">
+                        <img src="./Pictures/showcase-3.webp" alt="Happy Travelers"
+                            class="w-20 h-20 object-cover rounded-xl">
+
+                        <div>
+                            <div class="flex items-center gap-1 text-[#f4b400] text-sm mb-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-gray-800 font-semibold ml-2">4.9/5</span>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">
+                                "Amazing experience!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-40 pb-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class=" text-center mb-5">
+                    <span
+                        class="inline-block bg-[#f95e4d26] text-[#f95e4d] text-sm font-semibold px-6 py-2 rounded-full  mb-4">
+                        Why Choose Us
+                    </span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-800  font-[raleway]">
+                        What Makes Us Different
+                    </h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit
+                    </p>
+                </div>
+                <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <div
+                        class=" p-8 hover:shadow-2xl transition hover:border border-[#f95e4d] rounded-2xl  text-center duration-300 ">
+                        <div
+                            class="w-16 h-16 mx-auto flex items-center justify-center bg-[#f95e4d26] text-[#f95e4d] rounded-full mb-6 text-2xl">
+                            <i class="fa-regular fa-compass"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                            Expert Navigation
+                        </h4>
+                        <p class="text-gray-600">
+                            Quis nostrum exercitationem ullam corporis suscipit laboriosam
+                        </p>
+                    </div>
+                    <div
+                        class=" p-8 hover:shadow-2xl rounded-2xl transition duration-300 text-center hover:border border-[#f95e4d]">
+                        <div
+                            class="w-16 h-16 mx-auto flex items-center justify-center bg-[#f95e4d26] text-[#f95e4d] rounded-full mb-6 text-2xl">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                            Personalized Care
+                        </h4>
+                        <p class="text-gray-600">
+                            Excepteur sint occaecat cupidatat non proident sunt in culpa
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8  hover:shadow-2xl rounded-2xl  transition duration-300 text-center hover:border border-[#f95e4d]">
+                        <div
+                            class="w-16 h-16 mx-auto flex items-center justify-center bg-[#f95e4d26] text-[#f95e4d] rounded-full mb-6 text-2xl">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                            Instant Booking
+                        </h4>
+                        <p class="text-gray-600">
+                            Ut enim ad minim veniam quis nostrud exercitation ullamco
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 hover:shadow-2xl rounded-2xl transition duration-300 text-center hover:border border-[#f95e4d]">
+                        <div
+                            class="w-16 h-16 mx-auto flex items-center justify-center bg-[#f95e4d26] text-[#f95e4d] rounded-full mb-6 text-2xl">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                            Worldwide Coverage
+                        </h4>
+                        <p class="text-gray-600">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" px-6 ">
+            <div class="max-w-7xl mx-auto">
+
+                <!-- Section Title -->
+                <div class="text-left mb-12">
+                    <h2 class="text-[14px]  text-gray-800 ">Featured Destinations</h2>
+                    <div class="font-semibold text-xl">
+                        <span>Check Our Featured Destinations</span>
+                    </div>
+                </div>
+
+                <!-- Destinations Grid -->
+                <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Destination Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-1.webp" alt="Santorini, Greece"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                Popular</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Santorini, Greece</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Experience breathtaking sunsets and pristine
+                                white-washed
+                                villages overlooking the azure Aegean Sea.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Romantic</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Luxury</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>12
+                                    Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-2.webp" alt="Bali, Indonesia"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                Editor's Pick</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Bali, Indonesia</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Discover tropical paradise with ancient temples,
+                                lush
+                                rice
+                                terraces, and world-class beaches.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Adventure</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Culture</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>18
+                                    Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-3.webp" alt="Machu Picchu, Peru"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                New</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Machu Picchu, Peru</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Trek through ancient Incan ruins and witness one
+                                of
+                                the
+                                world's most spectacular archaeological sites.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Adventure</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">History</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>8 Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-4.webp" alt="Kyoto, Japan"
+                                class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Machu Picchu, Peru</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Trek through ancient Incan ruins and witness one
+                                of
+                                the
+                                world's most spectacular archaeological sites.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">CULTURE</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">PEACEFUL</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>15
+                                    Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-5.webp" alt="Swizz Alps, Switzerland"
+                                class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Swizz Alps, Switzerland</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Trek through ancient Incan ruins and witness one
+                                of
+                                the
+                                world's most spectacular archaeological sites.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">Adventure</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">NATURE</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>22
+                                    Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="relative">
+                            <img src="./Pictures/destination-6.webp" alt="Maldives" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Maldives</h4>
+                            <p class="text-gray-600 mb-4 text-sm">Trek through ancient Incan ruins and witness one
+                                of
+                                the
+                                world's most spectacular archaeological sites.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">LUXURY</span>
+                                <span
+                                    class="bg-[#f95e4d26] text-[#f95e4d] text-xs font-semibold px-2 py-1 rounded-full">HONEYMOON</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>6 Tours
+                                    Available</div>
+                                <a href="#" class="text-[#f95e4d] font-semibold flex items-center hover:underline">
+                                    Explore <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center bg-[#f95e4d26] py-10 rounded-3xl">
+                    <h3 class="text-2xl md:text-3xl font-bold font-[raleway] mb-2">Can't Decide Where to Go?</h3>
+                    <p class=" mb-6 max-w-xl mx-auto">Our travel experts are here to help you find the
+                        perfect destination based on your preferences, budget, and travel style.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="destinations.html"
+                            class="text-white bg-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#f95e4d] transition">View
+                            All Destinations</a>
+                        <a href="contact.html"
+                            class="border text-[#f95e4d] border-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#f95e4d] hover:text-white transition">Talk
+                            to Expert</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-16 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-left mb-12">
+                    <h2 class="text-xl font-bold font-[raleway] text-gray-800">
+                        Featured Tours
+                    </h2>
+                    <p class="text-gray-500 mt-2 font-[poppins] text-[14px]">
+                        Explore our most popular travel destinations
+                    </p>
+                </div>
+                <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <!-- 1 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-1.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Best
+                                    Seller</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$3,290</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2 font-[raleway]">Alpine Mountain Adventure</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>7 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>Switzerland</span>
+                                </div>
+                                <p class="text-sm mb-4">Experience breathtaking mountain views.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-22.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Popular</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$2,150</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Santorini Escape</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>5 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>Greece</span>
+                                </div>
+                                <p class="text-sm mb-4">Stunning sunsets & ocean views.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-3.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Luxury</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$4,100</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Maldives Paradise</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>6 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>Maldives</span>
+                                </div>
+                                <p class="text-sm mb-4">Crystal clear water villas.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-4.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span
+                                    class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Adventure</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$1,890</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Safari Experience</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>4 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>Kenya</span>
+                                </div>
+                                <p class="text-sm mb-4">Wildlife & breathtaking nature.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-5.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Cultural</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$2,700</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Tokyo Discovery</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>6 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>Japan</span>
+                                </div>
+                                <p class="text-sm mb-4">Tradition meets technology.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-6.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">City</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$1,500</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">New York Highlights</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>3 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>USA</span>
+                                </div>
+                                <p class="text-sm mb-4">The city that never sleeps.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-7.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Romantic</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$2,950</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Paris Getaway</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>5 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>France</span>
+                                </div>
+                                <p class="text-sm mb-4">The city of love awaits.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <img src="./Pictures/tour-8.webp"
+                            class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/70 text-white p-6 flex flex-col justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition duration-500">
+                            <div class="flex justify-between">
+                                <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold">Desert</span>
+                                <span
+                                    class="bg-white text-gray-800 text-sm px-3 py-1 rounded-full font-semibold">$2,400</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2">Dubai Explorer</h3>
+                                <div class="flex gap-4 text-sm mb-3">
+                                    <span><i class="fa-solid fa-calendar-days mr-1"></i>4 Days</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i>UAE</span>
+                                </div>
+                                <p class="text-sm mb-4">Luxury meets desert adventure.</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="#"
+                                        class="bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Explore</a>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="tours.html"
+                    class="inline-block bg-[#f95e4d] text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                    Discover More Adventures
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="text-left pl-[8%] mb-12">
+                <span class="text-sm  text-gray-400  relative inline-block mb-2">
+                    TESTIMONIALS
+                    <span class="block h-0.5 w-16 bg-[#f95e4d] mx-auto mt-1"></span>
+                </span>
+                <h2 class="text-xl font-semibold text-gray-900 font-[raleway]">What Our Customers Are Saying</h2>
+            </div>
+            <div class="s max-w-4xl mx-auto">
+                <div class=" flex flex-col md:flex-row items-center  p-6 md:p-10 ">
+                    <div class=" ">
+                        <p class="text-gray-700 italic mb-4">
+                            <i class="fa-solid fa-quote-left text-[#f95e4d] text-xl"></i>
+                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                            cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                            legam anim culpa.
+                            <i class="fa-solid fa-quote-right text-[#f95e4d] text-xl"></i>
+                        </p>
+                        <h3 class="font-semibold text-lg text-gray-900">Sara Wilsson</h3>
+                        <p class="text-gray-400 text-sm mb-2">Designer</p>
+                        <div class="flex space-x-1">
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 ml-0 md:ml-6">
+                        <img src="./Pictures/sarah.webp" alt="Sara Wilsson"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="call-to-action"
+            class="mt-10 text-white relative bg-[url('./Pictures/showcase-1.webp')] bg-cover bg-center min-h-[2000px] md:min-h-[1150px] xl:min-h-[750px] bg-[#f95e4d]/10">
+            <div class="absolute inset-0 bg-[#f95e4d]/90">
+
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="max-w-3xl mx-auto text-center pt-20">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 font-[raleway]">
+                            Ready to Start Your Next Adventure?
+                        </h2>
+
+                        <p class="text-gray-200 mb-8">
+                            Discover breathtaking destinations, create unforgettable memories,
+                            and explore the world with our expertly crafted travel packages.
+                            From exotic beaches to mountain peaks, your perfect journey awaits.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="destinations.html"
+                                class="bg-white text-[#f95e4d] px-6 py-3 rounded-full font-semibold hover: transition">
+                                Explore Destinations
+                            </a>
+
+                            <a href="tours.html"
+                                class="border border-white px-6 py-3 rounded-full font-semibold  transition">
+                                Plan Your Trip
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="grid gap-8 mt-16 sm:grid-cols-2 lg:grid-cols-4 text-center">
+
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white rounded-full text-[#f95e4d] text-3xl">
+                                <i class="fa-solid fa-globe text-2xl"></i>
+                            </div>
+
+                            <h4 class="font-semibold text-lg mb-2">50+ Destinations</h4>
+
+                            <p class="text-gray-200 text-sm">
+                                Explore amazing destinations across all continents
+                            </p>
+
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white rounded-full text-[#f95e4d] text-3xl">
+                                <i class="fa-solid fa-shield-halved text-[]"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">Safe & Secure</h4>
+                            <p class="text-gray-200 text-sm">
+                                Travel with confidence with our safety guarantee
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                            <div
+                                class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white rounded-full text-[#f95e4d] text-3xl">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">24/7 Support</h4>
+                            <p class="text-gray-200 text-sm">
+                                Round-the-clock assistance whenever you need it
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                            <div
+                                class="text-3xl text-[#f95e4d]  w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white rounded-full">
+                                <i class="fa-solid fa-percent"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">Best Prices</h4>
+                            <p class="text-gray-200 text-sm">
+                                Competitive rates with exclusive deals and offers
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div
+                        class="grid gap-8 mt-20 sm:grid-cols-2 lg:grid-cols-4 text-center backdrop-blur-xl bg-white/10 rounded-xl py-5">
+
+                        <div>
+                            <div class="text-4xl font-bold text-white">15,000+</div>
+                            <div class="text-gray-200 mt-2">Happy Travelers</div>
+                        </div>
+
+                        <div>
+                            <div class="text-4xl font-bold text-white">127</div>
+                            <div class="text-gray-200 mt-2">Countries Covered</div>
+                        </div>
+
+                        <div>
+                            <div class="text-4xl font-bold text-white">98%</div>
+                            <div class="text-gray-200 mt-2">Satisfaction Rate</div>
+                        </div>
+
+                        <div>
+                            <div class="text-4xl font-bold text-white">12+</div>
+                            <div class="text-gray-200 mt-2">Years Experience</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+    </main>
+    <footer id="footer" class="bg-[#001a1d] text-gray-300">
+        <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-6 font-[raleway]">TravelTime</h2>
+                <p class="mb-6">
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+                    Donec velit neque auctor sit amet aliquam vel ullamcorper sit amet ligula.
+                </p>
+                <h3 class="text-white font-semibold mb-3 font-[raleway] text-[16px]">Stay Updated</h3>
+                <form class="flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full px-4 py-3 rounded-l-full bg-[#0b2a2e] text-white focus:outline-none">
+                    <button
+                        class="bg-[#f95e4d] px-6 rounded-r-full flex items-center justify-center hover:bg-red-500 transition duration-300">
+                        <i class="fa-solid fa-paper-plane text-white"></i>
+                    </button>
+                </form>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]">
+                    Company
+                    <span class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"></span>
+                </h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                About
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Careers
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Press
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Blog
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Contact
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]">
+                    Solutions
+                    <span class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"></span>
+                </h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Digital Strategy
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Cloud Computing
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Data Analytics
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                AI Solutions
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
+                            <i
+                                class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">
+                                Cybersecurity
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 relative inline-block font-[raleway]">
+                    Get in Touch
+                    <span class="absolute left-0 -bottom-2 w-10 h-[2px] bg-[#f95e4d]"></span>
+                </h4>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-[#f95e4d]"></i>
+                        </div>
+                        <p>
+                            2847 Maple Avenue<br>
+                            Los Angeles, CA 90210<br>
+                            United States
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-[#f95e4d]"></i>
+                        </div>
+                        <p>+1 (555) 987-6543</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-[#f95e4d]"></i>
+                        </div>
+                        <p>contact@example.com</p>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-[#0b2a2e] rounded-full flex items-center justify-center hover:bg-[#f95e4d] hover:text-white transition duration-300">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-[#0b2a2e] bg-[#031013]">
+            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <p>© Copyright <strong class="text-white ">MyWebsite</strong> All Rights Reserved</p>
+
+                <div class="text-sm flex flex-wrap gap-6 items-center">
+                    <a href="#" class="hover:text-[#f95e4d] transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-[#f95e4d] transition">Terms of Service</a>
+                    <a href="#" class="hover:text-[#f95e4d] transition">Cookie Policy</a>
+                    <span>Designed by <a href="#" class="text-[#f95e4d]">BootstrapMade</a></span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="scroll-top" class=" w-10 h-10 text-white  fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%]"><i
+            class="fa-solid fa-arrow-up mx-[9px] my-3"></i></a>
+</body>
+
+</html>
