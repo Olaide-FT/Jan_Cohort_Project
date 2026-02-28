@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
         rel="stylesheet">
     <title>Traveltime</title>
 </head>
-    <style>
+<style>
     .dropdown {
         position: relative;
     }
@@ -34,6 +35,11 @@
     }
 
     .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* ✅ mobile click toggle */
+    #menu-toggle:checked~.dropdown-content {
         display: block;
     }
 </style>
@@ -57,27 +63,36 @@
                     <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
                 </ul>
             </nav>
-           <div class="dropdown block xl:hidden space-x-4">
+            <div class="dropdown block xl:hidden space-x-4">
+
                 <a href="#"
-                    class="bg-[#f95e4d] px-3  py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition ">
+                    class="bg-[#f95e4d] px-3 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition">
                     Get Started
                 </a>
-                <!-- MOBILE MENU WRAPPER -->
-                    <i class="fa-solid fa-bars text-xl z-10"></i>
-                    <nav class="dropdown-content right-0 top-[40px] text-black">
-                        <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
-                            <li><a href="index.html" class="hover:text-[#f95e4d] transition">Home</a></li>
-                            <li><a href="about.html" class="text-[#f95e4d]"> About</a></li>
-                            <li><a href="destination.html" class="hover:text-[#f95e4d] transition">Destinations</a>
-                            </li>
-                            <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
-                            <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
-                            <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
-                            <li><a href="#" class="hover:text-[#f95e4d] transition">More Pages</a></li>
-                            <li><a href="#" class="hover:text-[#f95e4d] transition">Dropdown</a></li>
-                            <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
-                        </ul>
-                    </nav>
+
+                <!-- ✅ TOGGLE CHECKBOX -->
+                <input type="checkbox" id="menu-toggle" class="hidden">
+
+                <!-- ✅ HAMBURGER -->
+                <label for="menu-toggle">
+                    <i class="fa-solid fa-bars text-xl z-10 cursor-pointer"></i>
+                </label>
+
+                <!-- MOBILE MENU -->
+                <nav class="dropdown-content right-0 top-[40px] text-black">
+                    <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
+                        <li><a href="index.html" class="hover:text-[#f95e4d] transition">Home</a></li>
+                        <li><a href="about.html" class="text-[#f95e4d]">About</a></li>
+                        <li><a href="destination.html" class="hover:text-[#f95e4d] transition">Destinations</a></li>
+                        <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
+                        <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
+                        <li><a href="#">More Pages</a></li>
+                        <li><a href="#">Dropdown</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </header>
@@ -140,7 +155,8 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-award"></i>
                         </div>
                         <h5 class="font-semibold mb-3">Expert Local Guides</h5>
@@ -150,7 +166,8 @@
                         </p>
                     </div>
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-headset"></i>
                         </div>
                         <h5 class="font-semibold mb-3">24/7 Customer Support</h5>
@@ -160,7 +177,8 @@
                         </p>
                     </div>
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h5 class="font-semibold mb-3">Best Price Guarantee</h5>
@@ -170,7 +188,8 @@
                         </p>
                     </div>
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <h5 class="font-semibold mb-3">Local Expertise</h5>
@@ -180,7 +199,8 @@
                         </p>
                     </div>
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-calendar-check"></i>
                         </div>
                         <h5 class="font-semibold mb-3">Flexible Booking</h5>
@@ -190,7 +210,8 @@
                         </p>
                     </div>
                     <div class="text-center p-6 ">
-                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[#f95e4d1a] hover:bg-[#f95e4d] rounded-full text-[#f95e4d] hover:text-white text-3xl">
                             <i class="fa-solid fa-leaf"></i>
                         </div>
                         <h5 class="font-semibold mb-3">Sustainable Travel</h5>
