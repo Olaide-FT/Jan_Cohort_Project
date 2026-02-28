@@ -37,6 +37,11 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+
+    /*  mobile click toggle */
+    #menu-toggle:checked~.dropdown-content {
+        display: block;
+    }
 </style>
 
 <body class="overflow-x-hidden font-[poppins]">
@@ -58,27 +63,36 @@
                     <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
                 </ul>
             </nav>
-           <div class="dropdown block xl:hidden space-x-4">
+            <div class="dropdown block xl:hidden space-x-4">
+
                 <a href="#"
-                    class="bg-[#f95e4d] px-3  py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition ">
+                    class="bg-[#f95e4d] px-3 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition">
                     Get Started
                 </a>
-                <!-- MOBILE MENU WRAPPER -->
-                    <i class="fa-solid fa-bars text-xl z-10"></i>
-                    <nav class="dropdown-content right-0 top-[40px] text-black">
-                        <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
-                            <li><a href="index.html" class="text-[#f95e4d]">Home</a></li>
-                            <li><a href="about.html" class="hover:text-[#f95e4d] transition"> About</a></li>
-                            <li><a href="destination.html" class="hover:text-[#f95e4d] transition">Destinations</a>
-                            </li>
-                            <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
-                            <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
-                            <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
-                            <li><a href="#" class="hover:text-[#f95e4d] transition">More Pages</a></li>
-                            <li><a href="#" class="hover:text-[#f95e4d] transition">Dropdown</a></li>
-                            <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
-                        </ul>
-                    </nav>
+
+                <!-- ✅ TOGGLE CHECKBOX -->
+                <input type="checkbox" id="menu-toggle" class="hidden">
+
+                <!-- ✅ HAMBURGER -->
+                <label for="menu-toggle">
+                    <i class="fa-solid fa-bars text-xl z-10 cursor-pointer"></i>
+                </label>
+
+                <!-- MOBILE MENU -->
+                <nav class="dropdown-content right-0 top-[40px] text-black">
+                    <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
+                        <li><a href="index.html" class="hover:text-[#f95e4d] transition">Home</a></li>
+                        <li><a href="about.html" class="text-[#f95e4d]">About</a></li>
+                        <li><a href="destination.html" class="hover:text-[#f95e4d] transition">Destinations</a></li>
+                        <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
+                        <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
+                        <li><a href="#">More Pages</a></li>
+                        <li><a href="#">Dropdown</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </header>
@@ -1114,7 +1128,8 @@
             </div>
         </div>
     </footer>
-    <a href="#" id="scroll-top" class=" w-10 h-10 text-white  fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%] scroll-smooth scroll-mt-[20px]"><i
+    <a href="#" id="scroll-top"
+        class=" w-10 h-10 text-white  fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%] scroll-smooth scroll-mt-[20px]"><i
             class="fa-solid fa-arrow-up mx-[9px] my-3"></i></a>
 </body>
 
