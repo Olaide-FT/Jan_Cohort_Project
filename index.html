@@ -20,8 +20,26 @@
         rel="stylesheet">
     <title>Traveltime</title>
 </head>
+<style>
+    .dropdown {
+        position: relative;
+    }
 
-<body class="">
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<body class="overflow-x-hidden font-[poppins]">
     <header class="absolute top-0 w-full z-10 ">
         <div class="max-w-7xl mx-auto flex justify-between items-center py-6 px-6 text-white ">
             <h1 class="text-2xl font-bold font-[raleway]">
@@ -31,7 +49,7 @@
                 <ul class="flex gap-8 text-sm font-medium">
                     <li><a href="index.html" class="text-[#f95e4d]">Home</a></li>
                     <li><a href="about.html" class="hover:text-[#f95e4d] transition">About</a></li>
-                    <li><a href="destination.html" class="hover:text-[#f95e4d] transition">Destinations</a></li>
+                    <li><a href="destinations.html" class="hover:text-[#f95e4d] transition">Destinations</a></li>
                     <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
                     <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
                     <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
@@ -40,24 +58,44 @@
                     <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#" class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition">
-                Get Started
-            </a>
+           <div class="dropdown block xl:hidden space-x-4">
+                <a href="#"
+                    class="bg-[#f95e4d] px-3  py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition ">
+                    Get Started
+                </a>
+                <!-- MOBILE MENU WRAPPER -->
+                    <i class="fa-solid fa-bars text-xl z-10"></i>
+                    <nav class="dropdown-content absolute right-0 top-[40px] text-black">
+                        <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
+                            <li><a href="index.html" class="text-[#f95e4d] block">Home</a></li>
+                            <li><a href="about.html" class="hover:text-[#f95e4d] transition"> About</a></li>
+                            <li><a href="destinations.html" class="hover:text-[#f95e4d] transition">Destinations</a>
+                            </li>
+                            <li><a href="tours.html" class="hover:text-[#f95e4d] transition">Tours</a></li>
+                            <li><a href="gallery.html" class="hover:text-[#f95e4d] transition">Gallery</a></li>
+                            <li><a href="blog.html" class="hover:text-[#f95e4d] transition">Blog</a></li>
+                            <li><a href="#" class="hover:text-[#f95e4d] transition">More Pages</a></li>
+                            <li><a href="#" class="hover:text-[#f95e4d] transition">Dropdown</a></li>
+                            <li><a href="contact.html" class="hover:text-[#f95e4d] transition">Contact</a></li>
+                        </ul>
+                    </nav>
+            </div>
         </div>
     </header>
     <main class="overflow-hidden">
-        <div class="relative bg-[url('./pictures/showcase-1.webp')] bg-cover bg-center min-h-[920px] lg:min-h-[700px] md:min-h-[900px] bg-black/10" >
+        <div
+            class="relative bg-[url('./pictures/showcase-1.webp')] bg-cover bg-center min-h-[920px] lg:min-h-[700px] md:min-h-[900px] bg-black/10">
             <div class="absolute inset-0 bg-black/70"></div>>
             <div
-                class="relative z-10 max-w-7xl mx-auto px-6 top-[80px] md:top-40 flex flex-col lg:flex-row justify-between items-center gap-16 text-white">
+                class="relative max-w-7xl mx-auto px-6 top-[80px] md:top-40 flex flex-col lg:flex-row justify-between items-center gap-16 text-white">
                 <div class="max-w-xl">
                     <h1 class="text-4xl lg:text-6xl text-center md:text-center lg:text-left font-bold font-[raleway] ">
                         Discover the World with Us
                     </h1>
-                     <p class="mt-4 text-gray-300 text-center md:text-center lg:text-left">
+                    <p class="mt-4 text-gray-300 text-center md:text-center lg:text-left">
                         Explore breathtaking destinations and create unforgettable memories with our expertly crafted
                         tours.
-                    </p> 
+                    </p>
                     <div class="flex gap-5 justify-center lg:justify-start mt-4">
                         <a href="#"
                             class="bg-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#ff6b5c] transition">
@@ -131,21 +169,21 @@
                     <div class="mt-10 space-y-5">
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
-                                <i class="fa-solid fa-check"></i>
+                                class="w-8 h-4 md:w-6 h-6  bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-check "></i>
                             </div>
                             <span class="text-gray-800">Expert local guides in every destination</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                class=" w-8 h-4 md:w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <span class="text-gray-800">Customized itineraries for every traveler</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div
-                                class="w-6 h-6 bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
+                                class="w-10 h-4 md:w-6 h-6  bg-[#f95e4d] rounded-full flex items-center justify-center text-white text-xs">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <span class="text-gray-800">24/7 customer support throughout your journey</span>
@@ -452,7 +490,7 @@
                     <h3 class="text-2xl md:text-3xl font-bold font-[raleway] mb-2">Can't Decide Where to Go?</h3>
                     <p class=" mb-6 max-w-xl mx-auto">Our travel experts are here to help you find the
                         perfect destination based on your preferences, budget, and travel style.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 w-60 mx-auto md:w-auto ">
                         <a href="destinations.html"
                             class="text-white bg-[#f95e4d] px-6 py-3 rounded-full font-semibold hover:bg-[#f95e4d] transition">View
                             All Destinations</a>
@@ -899,7 +937,7 @@
                 </h4>
                 <ul class="space-y-4">
                     <li>
-                        <a href="#"
+                        <a href="about.html"
                             class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
                             <i
                                 class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
@@ -929,7 +967,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="blog.html"
                             class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
                             <i
                                 class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
@@ -939,7 +977,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="contact.html"
                             class="group flex items-center gap-3 text-gray-300 transition duration-300 hover:text-[#f95e4d]">
                             <i
                                 class="fa-solid fa-greater-than text-[10px] text-[#f95e4d] transition-transform duration-300 group-hover:translate-x-1"></i>
@@ -1076,7 +1114,7 @@
             </div>
         </div>
     </footer>
-    <a href="#" id="scroll-top" class=" w-10 h-10 text-white  fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%]"><i
+    <a href="#" id="scroll-top" class=" w-10 h-10 text-white  fixed bottom-10 right-10 bg-[#f95e4d] rounded-[100%] scroll-smooth scroll-mt-[20px]"><i
             class="fa-solid fa-arrow-up mx-[9px] my-3"></i></a>
 </body>
 
