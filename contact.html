@@ -25,6 +25,30 @@
       rel="stylesheet"
     />
     <title>Traveltime</title>
+
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*  mobile click toggle */
+      #menu-toggle:checked ~ .dropdown-content {
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
@@ -50,12 +74,63 @@
             <li><a class="text-[#f95e4d]" href="contact.html">Contact</a></li>
           </ul>
         </nav>
-        <a
-          href="#"
-          class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
-        >
-          Get Started
-        </a>
+        <div class="dropdown block xl:hidden space-x-4">
+          <a
+            href="#"
+            class="bg-[#f95e4d] px-3 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
+          >
+            Get Started
+          </a>
+
+          <!-- ✅ TOGGLE CHECKBOX -->
+          <input type="checkbox" id="menu-toggle" class="hidden" />
+
+          <!-- ✅ HAMBURGER -->
+          <label for="menu-toggle">
+            <i class="fa-solid fa-bars text-xl z-10 cursor-pointer"></i>
+          </label>
+
+          <!-- MOBILE MENU -->
+          <nav class="dropdown-content right-0 top-[40px] text-black">
+            <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
+              <li>
+                <a href="index.html" class="hover:text-[#f95e4d] transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-[#f95e4d] transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destination.html"
+                  class="hover:text-[#f95e4d] transition"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="tours.html" class="hover:text-[#f95e4d] transition"
+                  >Tours</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-[#f95e4d] transition"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" class="hover:text-[#f95e4d] transition"
+                  >Blog</a
+                >
+              </li>
+              <li><a href="#">More Pages</a></li>
+              <li><a href="#">Dropdown</a></li>
+              <li><a href="contact.html" class="text-[#f95e4d]">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20 text-white">
