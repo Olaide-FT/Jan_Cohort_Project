@@ -76,12 +76,59 @@
             </li>
           </ul>
         </nav>
-        <a
-          href="#"
-          class="bg-[#f95e4d] px-5 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
-        >
-          Get Started
-        </a>
+        <div class="dropdown block xl:hidden space-x-4">
+          <a
+            href="#"
+            class="bg-[#f95e4d] px-3 py-2 rounded-md text-sm font-semibold hover:bg-[#ff6b5c] transition"
+          >
+            Get Started
+          </a>
+
+          <!-- ✅ TOGGLE CHECKBOX -->
+          <input type="checkbox" id="menu-toggle" class="hidden" />
+
+          <!-- ✅ HAMBURGER -->
+          <label for="menu-toggle">
+            <i class="fa-solid fa-bars text-xl z-10 cursor-pointer"></i>
+          </label>
+
+          <!-- MOBILE MENU -->
+          <nav class="dropdown-content right-0 top-[40px] text-black">
+            <ul class="space-y-5 px-6 text-sm font-medium font-[poppins]">
+              <li><a href="index.html" class="text-[#f95e4d]">Home</a></li>
+              <li>
+                <a href="about.html" class="hover:text-[#f95e4d] transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destination.html"
+                  class="hover:text-[#f95e4d] transition"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="tours.html" class="hover:text-[#f95e4d] transition"
+                  >Tours</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-[#f95e4d] transition"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" class="hover:text-[#f95e4d] transition"
+                  >Blog</a
+                >
+              </li>
+              <li><a href="#">More Pages</a></li>
+              <li><a href="#">Dropdown</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="">
@@ -356,7 +403,7 @@
                 <span
                   class="transition-transform duration-300 group-hover:translate-x-1"
                 >
-                  About 
+                  About
                 </span>
               </a>
             </li>
